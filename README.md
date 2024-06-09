@@ -1,0 +1,90 @@
+# Django CSV Data Analysis Web Application
+
+This is a Django-based web application that allows users to upload CSV files, perform data analysis using pandas and numpy, and display the results and visualizations on the web interface.
+
+## Features
+
+- Upload CSV files via a web form.
+- Display the first few rows of the uploaded data.
+- Calculate summary statistics (mean, median, standard deviation) for numerical columns.
+- Identify and handle missing values.
+- Generate and display basic plots (e.g., histograms) for numerical columns.
+
+## Requirements
+
+- Python 3.x
+- Django
+- pandas
+- numpy
+- matplotlib
+- seaborn
+
+## Installation
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/yourusername/yourproject.git
+    cd yourproject
+    ```
+
+2. **Create and activate a virtual environment:**
+
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. **Install the required packages:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Apply the migrations:**
+
+    ```bash
+    python manage.py migrate
+    ```
+
+5. **Run the development server:**
+
+    ```bash
+    python manage.py runserver
+    ```
+
+6. **Open your web browser and visit:**
+
+    ```
+    http://127.0.0.1:8000/
+    ```
+
+## Usage
+
+1. **Upload CSV File:**
+    - Go to the upload page and choose a CSV file to upload.
+
+2. **View Data Analysis Results:**
+    - After uploading, the application will display the first few rows of the data, summary statistics, and visualizations.
+
+## Project Structure
+
+- `myproject/`: The main Django project directory.
+- `myapp/`: The Django app containing the core functionality.
+  - `templates/`: Directory containing HTML templates.
+    - `upload.html`: Template for the file upload page.
+    - `results.html`: Template for displaying analysis results.
+    - `data_analysis/error.html`: Template for displaying error messages.
+  - `forms.py`: File containing the Django form for file upload.
+  - `views.py`: File containing view functions for handling requests.
+- `static/`: Directory for static files (e.g., generated plots).
+
+
+## Acknowledgements
+
+- [Django](https://www.djangoproject.com/)
+- [pandas](https://pandas.pydata.org/)
+- [numpy](https://numpy.org/)
+- [matplotlib](https://matplotlib.org/)
+- [seaborn](https://seaborn.pydata.org/)
+
